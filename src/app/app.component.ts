@@ -13,6 +13,7 @@ export class AppComponent {
     new Pessoa(2, 'Adriele,', 34),
     new Pessoa(3, 'tonhe,', 64),
     new Pessoa(4, 'Raimundo,', 65),
+    new Pessoa(4, 'NANAN,', 64),
     
 ];
 
