@@ -4,6 +4,14 @@
 
 <p>Total de nomes: {{nomes.length}}</p>
 <p>Nome Principal: {{nomePrincipal.nome}} </p>
+
+<div *ngIf="nomes.length <= 6">
+<input type="text"/>
+<button>adicionar</button>
+
+
+</div>
+
 <ul>
   <li *ngFor="let item of nomes">
 
@@ -11,6 +19,6 @@
   </li>
 
 </ul>
-
+ <p *ngIf="nomes.length > 2">Tem muots nomes cadastrados!</p>
 
 <router-outlet></router-outlet>
