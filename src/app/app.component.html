@@ -5,20 +5,17 @@
 <p>Total de nomes: {{nomes.length}}</p>
 <p>Nome Principal: {{nomePrincipal.nome}} </p>
 
-<div *ngIf="nomes.length <= 6">
-<input type="text"/>
-<button>adicionar</button>
-
-
-</div>
-
 <ul>
-  <li *ngFor="let item of nomes">
+  <li *ngFor="let item of nomes" [style.color] = "corPrincipal">
 
-    {{item.nome}} - {{item.idade}} anos - {{item.getTipo()}}
+  
+    {{item.id}} - {{item.nome}} - {{item.idade}} anos - {{item.getTipo()}}
   </li>
 
 </ul>
- <p *ngIf="nomes.length > 2">Tem muots nomes cadastrados!</p>
+ 
+ <button (click)="trocarCor()">Clique aqui</button>
+ 
+
 
 <router-outlet></router-outlet>

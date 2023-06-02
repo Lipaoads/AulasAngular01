@@ -8,16 +8,24 @@ import { Pessoa } from './pessoa';
 })
 export class AppComponent {
   title = 'AulasAngular01';
+  
   nomes = [
     new Pessoa(1, 'Paulo,', 40),
     new Pessoa(2, 'Adriele,', 34),
     new Pessoa(3, 'tonhe,', 64),
     new Pessoa(4, 'Raimundo,', 65),
     new Pessoa(4, 'NANAN,', 64),
-    
-];
+  ];
+
 
 
 nomePrincipal = this.nomes[0];
+corPrincipal = '#FF0000';
+
+trocarCor = function() {
+  this.corPrincipal = '#FF0001'
   
+}
+
+
 }
