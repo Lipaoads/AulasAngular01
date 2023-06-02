@@ -6,16 +6,13 @@
 <p>Nome Principal: {{nomePrincipal.nome}} </p>
 
 <ul>
-  <li *ngFor="let item of nomes" [style.color] = "corPrincipal">
+  <li *ngFor="let item of nomes" style="color:red">
 
-  
     {{item.id}} - {{item.nome}} - {{item.idade}} anos - {{item.getTipo()}}
   </li>
 
 </ul>
- 
- <button (click)="trocarCor()">Clique aqui</button>
- 
+ <div *ngIf="nomes.length > 7">Que bosta!! Só tem isso</div>
 
 
 <router-outlet></router-outlet>
